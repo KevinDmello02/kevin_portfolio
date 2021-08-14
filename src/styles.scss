@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap-scss/bootstrap.scss";
+@import "./main.scss";
+
+.heading {
+    display: block;
+    .head-block {
+        display: flex;
+        justify-content: center;
+        // margin-top: -22%;
+        // margin: 0;
+        // align-self: center;
+        h3, p {
+            margin: 0;
+            font-size: 300%;
+            align-self: center;
+        }
+        h3 {
+            color: white
+        }
+        p {
+            align-self: center;
+            color: $orangered;
+            margin: 0% 1%;
+            font-weight: 800;
+            font-size: 400%;
+            padding: 0.5% 1%;
+            /* height: 66px; */
+            background-color: white;
+        }
+        p:before, p:after {
+            content: '';
+            position: absolute;
+            background-color: $darkmint;
+            height: 26px;
+            width: 26px;
+        }
+        p:before {
+            top: -7%;
+            margin-left: -14px;
+            z-index: -1;
+        }
+        p:after {
+            bottom: -7%;
+            margin-left: -14px;
+            z-index: -1;
+        }
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    .heading {
+        .head-block {
+            p {
+                font-size: 250%;
+            }
+            h3 {
+                font-size: 250%;
+            }
+            p:before {
+                margin-left: -8px;
+            }
+            p:after {
+                margin-left: -18px;
+            }
+        }
+    }
+}   

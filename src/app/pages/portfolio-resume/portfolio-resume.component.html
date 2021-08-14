@@ -1,0 +1,16 @@
+<section class="resume">
+    <div class="heading">
+        <div class="head-block">
+            <p>R</p><h3>esume</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6" *ngIf="!showTextResume">
+            <button (click)="downloadMyFile()">Download Resume</button>
+        </div>
+        <div class="col-lg-6">
+            <img (click)="downloadMyFile()" src="/assets/images/0001.jpg" />
+            <p *ngIf="showTextResume">Click on above resume to download.</p>
+        </div>
+    </div>
+</section>

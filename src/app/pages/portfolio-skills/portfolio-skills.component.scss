@@ -1,0 +1,98 @@
+@import "../../../main.scss";
+
+section {
+    height: 100vh;
+    padding: 5%;
+}
+.heading {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    .head-block {
+        p:before {
+            top: -7%;
+            margin-left: -20px;
+            z-index: -1;
+        }
+        p:after {
+            bottom: -7%;
+            margin-left: -7px;
+            z-index: -1;
+        }
+    }
+}
+.skills {
+    .row {
+        .skill-button-container {
+            position: relative;
+            display: block;
+            width: 100%;
+            button {
+                display: block;
+                margin: auto;
+                width: 5%;
+                background: transparent;
+                color: White;
+                border: 3px solid white;
+                border-radius: 50%;
+            }
+        }
+    }
+    .row1, .row5 {
+        img {
+            display: block;
+            margin: auto;
+            width: 10%;
+        }
+        margin: -2% 0%;
+    }
+    .row2, .row4 {
+        img {
+            display: block;
+            margin: auto;
+            width: 20%;
+        }
+        margin: 5% 0%;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    .heading {
+        top: 0%;
+        transform: translate(0%, 0%);
+        .head-block {
+            p:before {
+                margin-left: -8px;
+            }
+            p:after {
+                margin-left: -18px;
+            }
+        }
+    }
+    .skills {
+        .row {
+            flex-wrap: nowrap;
+            .img-caption {
+                text-align: center;
+                color: white;
+                margin: 0;
+            }
+        }
+        .row1, .row5 {
+            img {
+                display: block;
+                margin: auto;
+                width: 40%;
+            }
+            margin: 18% 0% 0% 0%;
+        }
+        .row2, .row4 {
+            img {
+                display: block;
+                width: 70%;
+            }
+            margin: 8% 0%;
+        }
+    }
+}

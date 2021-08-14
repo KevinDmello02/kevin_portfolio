@@ -1,0 +1,141 @@
+@import '../../../main.scss';
+
+.outer-container {
+    display: block;
+    max-width: 1400px;
+    margin: auto;
+}
+.mystyle {
+    background: $orangered!important;
+    color: #fff!important;
+}
+::ng-deep .custom-tooltip {
+    position: relative;
+    font-size: 150%;
+    left: 25%;
+    color: red;
+    background: rgba(100, 145, 112, 0.7);
+}
+.nav-group {
+    position: fixed;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    left: 5%;
+    ul {
+        list-style: none;
+        width: 100px;
+        height: 30vh;
+        display: flex;
+        flex-flow: column;
+        position: relative;
+        justify-content: center;
+        li {
+            text-align: center;
+            background: white;
+            color: $orangered;
+            margin: 5%;
+            border-radius: 50%;
+            font-size: 210%;
+            margin: 15% 5%;
+            transform: scale(0.3);
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+        .data {
+            background: $orangered;
+            color: white;
+        }
+        
+    }
+}
+.intro {
+    overflow: hidden;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    padding: 5% 10%;
+    background-color: rgb(0,0,0);
+    .intro-contents {
+        height: 100vh;
+    }
+    .box {
+        position: relative;
+        padding: 35% 0%;
+    }
+    h1 {
+        font-size: 500%;
+        font-weight: 700;
+    }
+    .intro-text1, .intro-text2 {
+        color: $orangered;
+    }
+    .intro-text3 {
+        color: white;
+    }
+    .about-container {
+        padding: 50% 0%;
+        .heading {
+            .head-block {
+                margin-top: -22%;
+            }
+        }
+        .about-text {
+            display: block;
+            h3 {
+                color: $orangered;
+                font-size: 250%;
+                font-weight: 600;
+                text-align: center;
+                margin-top: 10%;
+            }
+            h6 {
+                color: $grey;
+                text-align: justify;
+                font-size: 130%;
+                font-weight: 300;
+                margin-top: 4%;
+            }
+        }
+    } 
+}
+@media only screen and (min-width: 1500px) {
+    .intro {
+        .box {
+            h1 {
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+    .nav-group {
+        display: none;
+    }
+    .intro {
+        .box {
+            height: 95vh;
+            display: flex;
+            padding: 0%;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .about-container {
+            .about-text {
+                margin-top: 102%;
+                h3 {
+                    font-size: 200%;
+                }
+                h6 {
+                    font-size: 100%;
+                }
+            }
+        }
+    }
+} 

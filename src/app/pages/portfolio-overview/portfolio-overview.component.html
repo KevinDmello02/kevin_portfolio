@@ -1,0 +1,82 @@
+<div class="outer-container">
+    <div class="nav-group">
+        <ul>
+            <li (click)="scrollToElement(aboutscroll)" 
+                matTooltip="About Me" 
+                matTooltipClass="custom-tooltip" 
+                matTooltipPosition="after"
+                class="data about-li"
+                >
+                A
+            </li>
+            <li (click)="scrollToElement(workscroll)" 
+                matTooltip="Work Experience" 
+                matTooltipClass="custom-tooltip" 
+                matTooltipPosition="after"
+                class="work-li"
+                >
+                W
+            </li>
+            <li (click)="scrollToElement(educationscroll)" 
+                matTooltip="Education" 
+                matTooltipClass="custom-tooltip" 
+                matTooltipPosition="after"
+                class="education-li"
+                >
+                E
+            </li>
+            <li (click)="scrollToElement(skillsscroll)" 
+                matTooltip="Skills" 
+                matTooltipClass="custom-tooltip" 
+                matTooltipPosition="after"
+                class="skills-li"
+                >
+                S
+            </li>
+            <li (click)="scrollToElement(resumescroll)" 
+                matTooltip="Resume Download" 
+                matTooltipClass="custom-tooltip" 
+                matTooltipPosition="after"
+                class="resume-li"
+                >
+                R
+            </li>
+        </ul>
+    </div>
+    <section  id="about" #aboutscroll class="intro">
+        <div class="intro-contents">
+            <div class="row h-100">
+                <div class="col-lg-6">
+                    <div class="box">
+                        <h1 class="intro-text1">Dream.</h1>
+                        <h1 class="intro-text2">Idea.</h1>
+                        <h1 class="intro-text3">Code.</h1>
+                    </div>
+                    <div class="about-container">
+                        <div class="heading">
+                            <div class="head-block">
+                                <p>A</p><h3>bout Me</h3>
+                            </div>
+                        </div>
+                        <div class="about-text">
+                            <h3>Kevin D'mello</h3>
+                            <h6>A passionate software developer, with 2+ years of experience in building, maintaining and designing professional webapps and websites.  </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="work" class="element-data" #workscroll>
+        <app-portfolio-work ></app-portfolio-work>
+    </section>
+    <section id="education" class="element-data" #educationscroll>
+        <app-portfolio-education ></app-portfolio-education>
+    </section>
+    <section id="skills" class="element-data" #skillsscroll>
+        <app-portfolio-skills></app-portfolio-skills>
+    </section>
+    <section id="resume" class="element-data" #resumescroll>
+        <app-portfolio-resume></app-portfolio-resume>
+    </section>
+</div>
