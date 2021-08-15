@@ -84,7 +84,7 @@ export class PortfolioWorkComponent implements OnInit {
       triggerHook: 0
     })
     .setTween(workTimeline)
-    .addIndicators()
+    // .addIndicators()
     .setPin('.work')
     .addTo(this.controllerWork);
   }

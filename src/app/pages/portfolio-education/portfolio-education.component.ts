@@ -48,7 +48,7 @@ export class PortfolioEducationComponent implements OnInit {
       triggerHook: 0
     })
     .setTween(eduTimeline)
-    .addIndicators()
+    // .addIndicators()
     .setPin('.education')
     .addTo(this.controller);
   }

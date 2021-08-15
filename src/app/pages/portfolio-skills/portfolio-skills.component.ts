@@ -82,7 +82,7 @@ export class PortfolioSkillsComponent implements OnInit {
       triggerHook: 0
     })
     .setTween(skillsTimeline)
-    .addIndicators()
+    // .addIndicators()
     .setPin('.skills')
     .addTo(this.controller);
 

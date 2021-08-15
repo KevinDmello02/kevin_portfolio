@@ -116,7 +116,7 @@ export class PortfolioOverviewComponent implements OnInit {
       triggerHook: 0
     })
     .setTween(introTextTime)
-    .addIndicators()
+    // .addIndicators()
     .setPin('.intro')
     .addTo(this.controller);
   }
