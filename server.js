@@ -7,13 +7,15 @@ function requireHTTPS(req, res, next) {
 }
 const express = require('express');
 const app = express();
-app.use(requireHTTPS);
-app.use(express.static('./dist/kevin-portfolio'));
-app.get('/*', function(req, res) {
-    res.sendFile('index.html', {root: './dist/kevin-portfolio'}
-  );
-});
+const path = require('path');
+const port = 3000;
 
-app.listen(process.env.PORT || 8080, function(req, res) {
-    console.log(process.env.PORT)
-});
+app.use(express.static(__dirname + '/dist/portfolio'));
+
+app.get('/*', (req, res) => res.sendFile(path.join(__dirname + '/dist/portfolio/index.html')));
+
+console.log(path.join(__dirname + '/dist/portfolio/index.html'));
+
+app.listen(process.env.PORT || port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+})
